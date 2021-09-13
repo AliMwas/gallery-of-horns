@@ -1,13 +1,35 @@
+
+
 import React from 'react';
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 
 class HornedBeast extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.favorites = 'favorites';
+    this.state = { timeOfClick: 0 };
+  }
+
+  timeClickIncrease = (event) => {
+    this.setState({ timeOfClick: this.state.timeOfClick + 1 });
+  }
   render() {
     return (
       <div>
-        <h2>{this.props.Title}</h2>
-        <img src={this.props.Img} alt="Rhino Image"/>
-        <p>{this.props.Description}</p>
+      
+
+<Card style={{ width: '30rem' }}>
+                    <Card.Img variant="top" src={this.props.image_url} alt={this.props.title} />
+                    <Card.Body>
+                        <Card.Title>{this.props.title}</Card.Title>
+                        <Card.Text>
+                        {this.props.description} {this.state.timeOfClick} {this.favorites}
+                        </Card.Text>
+                        <Button onClick={this.timeClickIncrease} variant="primary">vote for favorite</Button>
+                    </Card.Body>
+                </Card>
       </div>
     )
   }
