@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Card from 'react-bootstrap/Card'
-//import Button from 'react-bootstrap/Button'
+
 
 class HornedBeast extends React.Component {
 
@@ -12,8 +12,12 @@ class HornedBeast extends React.Component {
     this.state = { timeOfClick: 0 };
   }
 
-  timeClickIncrease = (event) => {
+  Click = (event) => {
+    event.preventDefault()
     this.setState({ timeOfClick: this.state.timeOfClick + 1 });
+    this.props.handleDisplay();
+    this.props.filterBeast(this.props.image_url);
+    console.log(this.props.image_url)
   }
   render() {
     return (
@@ -21,18 +25,23 @@ class HornedBeast extends React.Component {
       
 
 <Card style={{ width: '30rem' }}>
-                    <Card.Img variant="top" src={this.props.image_url} onClick = {this.timeClickIncrease} alt={this.props.title} />
+                    <Card.Img variant="top" src={this.props.image_url} onClick = {this.Click} alt={this.props.title} />
                     <Card.Body>
                         <Card.Title>{this.props.title}</Card.Title>
                         <Card.Text>
                         {this.props.description} {this.state.timeOfClick} {this.favorites}
                         </Card.Text>
-                        {/* <Button onClick={this.timeClickIncrease} variant="primary">vote for favorite</Button> */}
+                   
                     </Card.Body>
                 </Card>
+
       </div>
     )
   }
 }
 
 export default HornedBeast;
+
+
+
+
