@@ -1,31 +1,13 @@
-## React State and Props
-Lab - 02:
-### Number and name of feature: Number  1: Display images
+## Passing Functions in Props
 
-Estimate of time needed to complete: 60 Minutes
+Lab - 03:
+### Display a Modal
 
-Start time: 3:00 pm
+Estimate of time needed to complete: 3 Hours
 
-Finish time: 4:30 pm
+Start time: 1:00 pm
 
-The actual time needed to complete: 90 Minutes
+Finish time: 7:00 pm
 
-### Number and name of feature: Number  2: Allow users to vote for their favorite beast
+The actual time needed to complete: 6 Hours
 
-Estimate of time needed to complete: 45 Minutes
-
-Start time: 4:50 pm
-
-Finish time: 6:00 pm
-
-The actual time needed to complete: 70 Minutes
-
-### Number and name of feature: Number  3: Bootstrap
-
-Estimate of time needed to complete: 50 Minutes
-
-Start time: 6:20 pm
-
-Finish time: 6:55 pm
-
-The actual time needed to complete: 35 Minutes
