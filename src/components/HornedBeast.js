@@ -2,13 +2,13 @@
 
 import React from 'react';
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
+//import Button from 'react-bootstrap/Button'
 
 class HornedBeast extends React.Component {
 
   constructor(props) {
     super(props);
-    this.favorites = 'favorites';
+    this.favorites = '❤️';
     this.state = { timeOfClick: 0 };
   }
 
@@ -21,13 +21,13 @@ class HornedBeast extends React.Component {
       
 
 <Card style={{ width: '30rem' }}>
-                    <Card.Img variant="top" src={this.props.image_url} alt={this.props.title} />
+                    <Card.Img variant="top" src={this.props.image_url} onClick = {this.timeClickIncrease} alt={this.props.title} />
                     <Card.Body>
                         <Card.Title>{this.props.title}</Card.Title>
                         <Card.Text>
                         {this.props.description} {this.state.timeOfClick} {this.favorites}
                         </Card.Text>
-                        <Button onClick={this.timeClickIncrease} variant="primary">vote for favorite</Button>
+                        {/* <Button onClick={this.timeClickIncrease} variant="primary">vote for favorite</Button> */}
                     </Card.Body>
                 </Card>
       </div>
